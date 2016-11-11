@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app="app1" ng-init="person={'fname':'senthil', 'lname':'kumar'}">
+
+<head >
+
+<script src="js/angular.min.js" > </script>
+<script src="js/file1.js" > </script>
+
+</head>
+
+<body>
+
+Hi
+
+<div ng-controller="cntrl1">
+
+     <input type="text" ng-model='first' />
+     <input type="text" ng-model='second' />
+
+    <button ng-click="calculate()"> Calculate </button>
+
+    <br>
+    {{third}}
+
+    <br>The second value is <span data-ng-bind="second"> </span>
+     <br>
+     <p> Your  name is {{person.fname + " " + person.lname}} </p>
+
+</div>
+
+<div ng-controller="cntrl2">
+
+     <input type="text" ng-model='first' />
+     <input type="text" ng-model='second' />
+
+    <button ng-click="calculate()"> Calculate </button>
+
+    <br>
+    {{third}}
+
+    <br>The second value is <span data-ng-bind="second"> </span>
+     <br>
+     <p> Your  name is {{person.fname + " " + person.lname}} </p>
+
+</div>
+
+<div ng-controller="cntrl3">
+
+Enter number : <input type='text' ng-model='number' />
+
+  <div ng-switch="number" >
+      <p ng-switch-when="1"> Hi </p>
+      <p ng-switch-when="2"> Hello </p>
+
+  </div>
+
+</div>
+
+</body>
+
+</html>
