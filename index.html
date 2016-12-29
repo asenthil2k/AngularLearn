@@ -12,8 +12,9 @@
 
 Hi there.
 
+<hr>
 <div ng-controller="cntrl1">
-
+This Section is for Names <br>
      <input type="text" ng-model='first' />
      <input type="text" ng-model='second' />
 
@@ -22,16 +23,17 @@ Hi there.
     <br>
     {{third}}
 
-    <br>The second value is <span data-ng-bind="second"> </span>
+    <br>The Full Name value is <span data-ng-bind="first"> </span> <span data-ng-bind="second"> </span>
      <br>
-     <p> Your  name is {{person.fname + " " + person.lname}} </p>
+     <p> Your Name by Expression is {{first + " " + second}} </p>
 
 </div>
 
+<hr>
 <div ng-controller="cntrl2">
-
-     <input type="text" ng-model='first' />
-     <input type="text" ng-model='second' />
+This Section is for Numbers <br>
+     <input type="text" ng-model='firstvalue' />
+     <input type="text" ng-model='secondvalue' />
 
     <button ng-click="calculate()"> Calculate </button>
 
@@ -44,8 +46,9 @@ Hi there.
 
 </div>
 
+<hr>
 <div ng-controller="cntrl3">
-
+This Section is to test Switches
 Enter number : <input type='text' ng-model='number' />
 
   <div ng-switch="number" >
