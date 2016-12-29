@@ -66,9 +66,13 @@ Enter number : <input type='text' ng-model='number' />
 <div ng-controller="cntrl4">
 This Section is to test Loops and Filters
 
+<input type='button' ng-click='changeOrder("name")' value='Order By Name' />
+<input type='button' ng-click='changeOrder("price")' value='Order By Price' />
+Filter :  <input type='text' ng-model='filtertext' />
+
 <table border =1 >
    <tr> <td>  Name </td>  <td>  Price </td> </tr>
-   <tr ng-repeat="x in books | orderBy:'price'"> <td >
+   <tr ng-repeat="x in books | orderBy:chosencolumn | filter:filtertext"> <td >
        {{ x.name}} </td> <td>  {{ x.price}} </td> </tr>
 </table>
 

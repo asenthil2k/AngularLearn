@@ -39,7 +39,17 @@ app1.controller('cntrl4', function($scope) {
 
   $scope.books = [
       {"name": "book1", "price" : 100},
-      {"name": "book2", "price" : 20}
+      {"name": "book2", "price" : 20},
+      {"name": "book3", "price" : 400},
+      {"name": "book4", "price" : 120},
+      {"name": "book5", "price" : 1200},
+      {"name": "book6", "price" : 250}
     ];
+
+  $scope.chosencolumn = 'price';
+  $scope.changeOrder = function(orderString) {
+      $scope.chosencolumn = orderString;
+
+  }
 
 });
