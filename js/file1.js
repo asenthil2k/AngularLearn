@@ -34,3 +34,12 @@ app1.controller('cntrl3', function($scope) {
   s =  $scope.number;
 
 });
+
+app1.controller('cntrl4', function($scope) {
+
+  $scope.books = [
+      {"name": "book1", "price" : 100},
+      {"name": "book2", "price" : 20}
+    ];
+
+});

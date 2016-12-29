@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="app1" ng-init="person={'fname':'senthil', 'lname':'kumar'}">
+<html ng-app="app1" ng-init="persons={'fname':'senthil', 'lname':'kumar'}">
 
 <head >
 
@@ -18,14 +18,14 @@ This Section is for Names <br>
      <input type="text" ng-model='first' />
      <input type="text" ng-model='second' />
 
-    <button ng-click="calculate()"> Calculate </button>
+    <button ng-click="calculate()"> Concatenate </button>
 
     <br>
     {{third}}
 
     <br>The Full Name value is <span data-ng-bind="first"> </span> <span data-ng-bind="second"> </span>
      <br>
-     <p> Your Name by Expression is {{first + " " + second}} </p>
+     <p> Your Name by Expression is {{ (first | uppercase) + " " + second}} </p>
 
 </div>
 
@@ -40,9 +40,11 @@ This Section is for Numbers <br>
     <br>
     {{third}}
 
-    <br>The second value is <span data-ng-bind="second"> </span>
+
      <br>
-     <p> Your  name is {{person.fname + " " + person.lname}} </p>
+     <p> Sum is {{  firstvalue + secondvalue  }} </p>
+     <p> Product is {{  firstvalue * secondvalue  }} </p>
+
 
 </div>
 
@@ -58,6 +60,18 @@ Enter number : <input type='text' ng-model='number' />
   </div>
 
 </div>
+
+
+<hr>
+<div ng-controller="cntrl4">
+This Section is to test Loops and Filters
+
+<table border =1 >
+   <tr> <td>  Name </td>  <td>  Price </td> </tr>
+   <tr ng-repeat="x in books | orderBy:'price'"> <td >
+       {{ x.name}} </td> <td>  {{ x.price}} </td> </tr>
+</table>
+
 
 </body>
 
